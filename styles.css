@@ -46,7 +46,18 @@ button{font:inherit}
 .nav-wrap{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;width:225px;min-width:180px}
 .brand img{width:100%;height:auto}
-.nav-links{display:flex;align-items:center;gap:28px;font-size:.92rem;font-weight:700}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:.92rem;
+  font-weight:700;
+  padding:7px;
+  border:1px solid rgba(255,204,0,.65);
+  border-radius:16px;
+  background:rgba(14,16,22,.78);
+  box-shadow:0 0 18px rgba(255,204,0,.08);
+}
 .nav-links>a:not(.nav-cta){color:#c8cdd8;transition:.2s ease}
 .nav-links>a:not(.nav-cta):hover{color:#fff}
 .nav-cta{
@@ -314,19 +325,3 @@ footer{border-top:1px solid var(--line);padding:52px 0 20px;background:#090b10}
 .sell-panel{padding:45px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#10131b,#0d1017)}
 .sell-panel p{color:#aeb5c1;max-width:760px}
 @media(max-width:760px){.steps-grid{grid-template-columns:1fr}.sell-panel{padding:28px}}
-
-/* KOGAME navigation: highlight the whole menu as one group */
-@media (min-width: 821px){
-  .nav-links{
-    padding:8px;
-    gap:8px;
-    background:rgba(18,21,30,.92);
-    border:1px solid #282d3b;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,.22);
-  }
-  .nav-links>a:not(.nav-cta){
-    padding:10px 14px;
-    border-radius:10px;
-  }
-}
