@@ -301,11 +301,16 @@ footer{border-top:1px solid var(--line);padding:52px 0 20px;background:#090b10}
   .footer-grid{grid-template-columns:1fr}
   .footer-brand{grid-column:auto}
 }
-footer .footer-brand img{
-    width:230px !important;
-    max-width:230px !important;
-    height:auto !important;
-    display:block;
-    object-fit:contain;
-    margin-bottom:28px;
-}
+
+/* Subpages */
+.subpage-hero{padding:88px 0 48px}
+.subpage-hero h1{font-size:clamp(2.8rem,6vw,5.2rem);letter-spacing:-.055em;line-height:.95;margin:10px 0 22px}
+.subpage-hero h1 em{font-style:normal;color:var(--yellow)}
+.subpage-lead{font-size:1.08rem;color:#bdc3cf;max-width:760px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step-card{padding:28px;border:1px solid var(--line);border-radius:18px;background:#10131b}
+.step-number{font-size:2rem;font-weight:900;color:var(--yellow);margin-bottom:12px}
+.step-card h3{margin:0 0 8px}.step-card p{margin:0;color:#969dac}
+.sell-panel{padding:45px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#10131b,#0d1017)}
+.sell-panel p{color:#aeb5c1;max-width:760px}
+@media(max-width:760px){.steps-grid{grid-template-columns:1fr}.sell-panel{padding:28px}}
