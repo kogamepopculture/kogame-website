@@ -1,1 +1,341 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adverts Items | KOGAME</title><meta name="theme-color" content="#08090d"><link rel="icon" type="image/png" href="assets/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><div class="page-glow glow-one"></div><div class="page-glow glow-two"></div><header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="index.html" aria-label="KOGAME home"><img src="assets/kogame-logo.png" alt="KOGAME logo with Westie mascot"></a><button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button><nav id="nav-links" class="nav-links"><a href="index.html">Home</a><a href="adverts-items.html">Shop</a><a href="sell-your-games.html">Sell Your Games</a><a href="index.html#about">About</a><a class="nav-cta" href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">Shop on Adverts</a></nav></div></header><main><section class="subpage-hero"><div class="wrap"><div class="eyebrow"><span></span> KOGAME ON ADVERTS.IE</div><h1>AVAILABLE <em>ITEMS</em></h1><p class="subpage-lead">Browse our current games, consoles, accessories and collectibles. Purchases are completed through Adverts.ie, where you can also see our seller feedback.</p><div class="hero-actions"><a class="button primary" href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">View all available items ↗</a></div></div></section><section class="section"><div class="wrap"><div class="section-heading simple"><div><span class="kicker">SHOP WITH CONFIDENCE</span><h2>How to buy</h2></div></div><div class="steps-grid"><article class="step-card"><div class="step-number">01</div><h3>Browse</h3><p>Choose an item from our current listings on Adverts.ie.</p></article><article class="step-card"><div class="step-number">02</div><h3>Ask or offer</h3><p>Use the listing to ask questions, check details or make an offer.</p></article><article class="step-card"><div class="step-number">03</div><h3>Postage or collection</h3><p>Once agreed, arrange the available delivery or collection option.</p></article></div></div></section><section class="feedback-strip"><div class="wrap feedback-inner"><div><span class="kicker">BUY WITH CONFIDENCE</span><h2>Real feedback from previous buyers.</h2></div><div class="feedback-quote"><div class="stars">★★★★★</div><p>100% positive feedback on Adverts.ie</p><a href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">View seller profile ↗</a></div></div></section></main><footer><div class="wrap footer-grid"><div class="footer-brand"><img src="assets/kogame-logo.png" alt="KOGAME logo"><p>An independent retro gaming seller and collector based in Ireland. Passionate about games, collecting and giving great games a new home.</p></div><div class="footer-col"><h3>What we offer</h3><a href="index.html#what-we-sell">Games</a><a href="index.html#what-we-sell">Consoles</a><a href="index.html#what-we-sell">Accessories</a><a href="index.html#what-we-sell">Collectibles</a></div><div class="footer-col"><h3>Shop with confidence</h3><span>Quality checked</span><span>Honest descriptions</span><span>Safe packaging</span><span>Fast dispatch from Ireland</span></div><div class="footer-col"><h3>Let’s connect</h3><a href="https://www.instagram.com/kogamepopculture/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">Adverts.ie ↗</a><a href="https://www.ebay.ie/usr/kogame-popculture" target="_blank" rel="noopener">eBay ↗</a><a href="https://www.tiktok.com/@kogamepopculture" target="_blank" rel="noopener">TikTok ↗</a></div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> KOGAME. All rights reserved.</span><span>Retro Games • Consoles • Pop Culture</span></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KOGAME | Adverts Items</title>
+  <meta name="description" content="Browse selected KOGAME games, consoles, accessories and collectibles available through Adverts.ie.">
+  <meta name="theme-color" content="#08090d">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .shop-hero{padding:74px 0 68px}
+    .shop-hero-inner{max-width:980px;margin:0 auto;text-align:center}
+    .shop-hero h1{
+      margin:12px auto 18px;
+      max-width:900px;
+      font-size:clamp(2.8rem,6vw,5.5rem);
+      line-height:.95;
+      letter-spacing:-.055em;
+      font-weight:900;
+    }
+    .shop-hero h1 em{font-style:normal;color:var(--yellow)}
+    .shop-hero p{max-width:790px;margin:0 auto 34px;color:#b9c0cd;font-size:1.02rem}
+    .shop-banner{
+      width:min(820px,100%);
+      margin:0 auto;
+      padding:14px;
+      border:1px solid #2b3040;
+      border-radius:22px;
+      background:#0d1017;
+      box-shadow:var(--shadow);
+    }
+    .shop-banner img{width:100%;border-radius:14px}
+    .shop-products{
+      padding:76px 0 88px;
+      border-top:1px solid rgba(255,212,0,.32);
+    }
+    .shop-products .section-heading{
+      justify-content:center;
+      text-align:center;
+      margin-bottom:38px;
+    }
+    .shop-products .section-heading > div{width:100%}
+    .shop-products h2{
+      margin:6px 0 0;
+      font-size:clamp(2rem,4vw,3.3rem);
+      letter-spacing:-.04em
+    }
+    .adverts-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:28px;
+    }
+    .adverts-card{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#131721,#0e1118);
+      transition:.2s ease;
+      box-shadow:0 12px 38px rgba(0,0,0,.18);
+    }
+    .adverts-card:hover{transform:translateY(-4px);border-color:#3a4154}
+    .adverts-photo{
+      aspect-ratio:1/1;
+      background:#0b0d12;
+      overflow:hidden;
+    }
+    .adverts-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .25s ease;
+    }
+    .adverts-card:hover .adverts-photo img{transform:scale(1.025)}
+    .adverts-info{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      text-align:center;
+    }
+    .adverts-type{
+      color:#858e9f;
+      font-size:.76rem;
+      text-transform:uppercase;
+      font-weight:800;
+      letter-spacing:.12em;
+    }
+    .adverts-info h3{
+      margin:8px 0 6px;
+      font-size:1.08rem;
+      line-height:1.25;
+      min-height:2.7em;
+    }
+    .adverts-detail{
+      margin:0;
+      color:#a9afbd;
+      font-size:.84rem;
+      min-height:1.5em;
+    }
+    .adverts-price{
+      margin:14px 0 17px;
+      font-weight:900;
+      color:var(--yellow);
+      font-size:1.35rem;
+    }
+    .adverts-info .button{margin-top:auto;width:100%}
+    .shop-all{text-align:center;margin-top:34px}
+    .how-buy{padding:0 0 88px}
+    .how-buy-box{
+      border:1px solid rgba(255,212,0,.22);
+      border-radius:24px;
+      padding:42px;
+      background:linear-gradient(110deg,rgba(255,212,0,.075),rgba(255,212,0,.015));
+    }
+    .how-buy-head{text-align:center;margin-bottom:30px}
+    .how-buy-head h2{margin:6px 0}
+    .buy-steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .buy-step{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:22px;
+      background:#0d1017;
+    }
+    .buy-step strong{display:block;color:var(--yellow);font-size:1.5rem;margin-bottom:7px}
+    .buy-step h3{margin:0 0 7px;font-size:.98rem}
+    .buy-step p{margin:0;color:#929aab;font-size:.84rem}
+    @media(max-width:900px){
+      .adverts-grid{grid-template-columns:repeat(2,1fr)}
+      .buy-steps{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
+      .shop-hero{padding-top:50px}
+      .adverts-grid,.buy-steps{grid-template-columns:1fr}
+      .how-buy-box{padding:28px 22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html" aria-label="KOGAME home">
+        <img src="assets/kogame-logo.png" alt="KOGAME logo with Westie mascot">
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-links" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="adverts-items.html">Adverts Items</a>
+        <a href="sell-your-games.html">Sell Your Games</a>
+        <a class="nav-cta" href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">Shop on Adverts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="wrap shop-hero-inner">
+        <div class="eyebrow" style="justify-content:center"><span></span> ADVERTS-ONLY DEALS</div>
+        <h1>SHOP OUR <em>ADVERTS-ONLY DEALS</em></h1>
+        <p>All purchases are completed through Adverts.ie, Ireland's trusted marketplace, where you can browse our listings, ask questions, check our seller feedback, and buy with confidence.</p>
+
+        <div class="shop-banner">
+          <img src="assets/KOGAME Retro Games Banner.png" alt="KOGAME retro games banner">
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-products">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">AVAILABLE ON ADVERTS.IE</span>
+            <h2><span style="color:var(--yellow)">ADVERTS</span> EXCLUSIVES</h2>
+          </div>
+        </div>
+
+        <div class="adverts-grid">
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/playstation/ps1-official-playstation-controller-without-analog-sticks/36990489" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_48ed09c65e134ad39f210b0da78af0e8~mv2.png/v1/fill/w_875,h_1216,al_c,q_90,enc_auto/20250413_161657_enhance_edited_enhance.png" alt="PS1 Official PlayStation Controller" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Controller</span>
+              <h3>PS1 Official PlayStation Controller</h3>
+              <p class="adverts-detail">Without Analog Sticks</p>
+              <div class="adverts-price">€18</div>
+              <a class="button primary" href="https://www.adverts.ie/playstation/ps1-official-playstation-controller-without-analog-sticks/36990489" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/playstation/standard-2-pin-power-supply-ps2/36972809" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_b2f94bce2d4645799f2ec5aac8ae1883~mv2.webp/v1/fill/w_928,h_1152,al_c,q_85,enc_auto/20250413_162140.webp" alt="PS2 power supply" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Cable</span>
+              <h3>Power Supply PS2</h3>
+              <p class="adverts-detail">Standard 2 pin</p>
+              <div class="adverts-price">€10</div>
+              <a class="button primary" href="https://www.adverts.ie/playstation/standard-2-pin-power-supply-ps2/36972809" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/arcade-retro/f1-grand-prix-n64-pal/39954604" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_1a0a6c10ad704ccdb10c7d4747d6390d~mv2.jpg/v1/fill/w_980,h_1072,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20250705_085547.jpg" alt="F1 Grand Prix N64" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Game</span>
+              <h3>F1 Grand Prix N64</h3>
+              <p class="adverts-detail">PAL cartridge</p>
+              <div class="adverts-price">€8</div>
+              <a class="button primary" href="https://www.adverts.ie/arcade-retro/f1-grand-prix-n64-pal/39954604" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/arcade-retro/gran-turismo-playstation-ps1-playstation-1-with-manual/39931382" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_ef32b52df558488cac80afccff0c6aa7~mv2.jpg/v1/fill/w_980,h_959,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20260413_124540.jpg" alt="Gran Turismo PlayStation PS1" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Game</span>
+              <h3>Gran Turismo PlayStation PS1</h3>
+              <p class="adverts-detail">PlayStation 1 with manual</p>
+              <div class="adverts-price">€20</div>
+              <a class="button primary" href="https://www.adverts.ie/arcade-retro/gran-turismo-playstation-ps1-playstation-1-with-manual/39931382" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/arcade-retro/nights-into-dreams-sega-saturn-pal-no-manual/39931626" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_dd5acb1643c94756b755a0c87dc14a88~mv2.jpg/v1/fill/w_980,h_1064,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20260413_133457.jpg" alt="Nights Into Dreams Sega Saturn" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Game</span>
+              <h3>Nights Into Dreams Sega Saturn</h3>
+              <p class="adverts-detail">PAL • No Manual</p>
+              <div class="adverts-price">€35</div>
+              <a class="button primary" href="https://www.adverts.ie/arcade-retro/nights-into-dreams-sega-saturn-pal-no-manual/39931626" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+          <article class="adverts-card">
+            <a class="adverts-photo" href="https://www.adverts.ie/other-toys-games/funko-pop-mew-643/39291560" target="_blank" rel="noopener">
+              <img src="https://static.wixstatic.com/media/7bc975_b730d5dc750845738885f00f65193fe1~mv2.jpg/v1/fill/w_980,h_1241,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20260117_141216.jpg" alt="Funko Pop Mew 643" loading="lazy">
+            </a>
+            <div class="adverts-info">
+              <span class="adverts-type">Pop Culture</span>
+              <h3>Funko Pop Mew 643</h3>
+              <p class="adverts-detail">Opened only to take pictures</p>
+              <div class="adverts-price">€13</div>
+              <a class="button primary" href="https://www.adverts.ie/other-toys-games/funko-pop-mew-643/39291560" target="_blank" rel="noopener">View on Adverts ↗</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="shop-all">
+          <a class="button primary" href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">Browse all on Adverts.ie ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-buy">
+      <div class="wrap">
+        <div class="how-buy-box">
+          <div class="how-buy-head">
+            <span class="kicker">BUY WITH CONFIDENCE</span>
+            <h2>How to Buy</h2>
+          </div>
+          <div class="buy-steps">
+            <div class="buy-step"><strong>01</strong><h3>Browse the listings</h3><p>Choose the game, console or collectible you're interested in.</p></div>
+            <div class="buy-step"><strong>02</strong><h3>Make an offer</h3><p>Open the Adverts.ie listing and click “Make Offer” to start the deal.</p></div>
+            <div class="buy-step"><strong>03</strong><h3>Complete payment</h3><p>Once your offer is accepted, arrange payment with the seller.</p></div>
+            <div class="buy-step"><strong>04</strong><h3>Postage or collection</h3><p>Choose the available postage or collection option for your purchase.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/kogame-logo.png" alt="KOGAME">
+        <p>An independent retro gaming seller and collector based in Ireland. Passionate about games, collecting and giving great games a new home.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>What we offer</h3>
+        <a href="index.html#what-we-sell">Games</a>
+        <a href="index.html#what-we-sell">Consoles</a>
+        <a href="index.html#what-we-sell">Accessories</a>
+        <a href="index.html#what-we-sell">Collectibles</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Shop with confidence</h3>
+        <span>Quality checked</span>
+        <span>Honest descriptions</span>
+        <span>Safe packaging</span>
+        <span>Fast dispatch from Ireland</span>
+      </div>
+
+      <div class="footer-col">
+        <h3>Let’s connect</h3>
+        <a href="https://www.instagram.com/kogamepopculture/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://www.adverts.ie/member/2061189" target="_blank" rel="noopener">Adverts.ie ↗</a>
+        <a href="https://www.ebay.ie/usr/kogame-popculture" target="_blank" rel="noopener">eBay ↗</a>
+        <a href="https://www.tiktok.com/@kogamepopculture" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <span>© <span id="year"></span> KOGAME. All rights reserved.</span>
+      <span>Retro Games • Consoles • Pop Culture</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
