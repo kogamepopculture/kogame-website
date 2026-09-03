@@ -301,3 +301,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 20px;background:#090b10}
   .footer-grid{grid-template-columns:1fr}
   .footer-brand{grid-column:auto}
 }
+footer .footer-brand img{
+    width:230px !important;
+    max-width:230px !important;
+    height:auto !important;
+    display:block;
+    object-fit:contain;
+    margin-bottom:28px;
+}
