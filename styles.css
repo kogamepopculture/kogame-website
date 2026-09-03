@@ -60,6 +60,17 @@ button{font:inherit}
 }
 .nav-links>a:not(.nav-cta){color:#c8cdd8;transition:.2s ease}
 .nav-links>a:not(.nav-cta):hover{color:#fff}
+
+.nav-links>a:not(.nav-cta){
+  padding:10px 14px;
+  border-radius:10px;
+}
+.nav-links>a:not(.nav-cta).active{
+  background:var(--yellow);
+  color:#111;
+  box-shadow:0 8px 22px rgba(255,212,0,.16);
+}
+.nav-links>a:not(.nav-cta).active:hover{color:#111;background:#ffe038}
 .nav-cta{
   background:var(--yellow);
   color:#111;
